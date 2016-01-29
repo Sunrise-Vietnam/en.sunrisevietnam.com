@@ -1,0 +1,347 @@
+@font-face {
+    font-family: "myriadpro";
+    src: url("./font-myriadpro/myriadpro-regular.otf")
+}
+@font-face {
+    font-family: "myriadprobold";
+    src: url("./font-myriadpro/myriadpro-bold.otf")
+}
+.white,.white:hover,.white:focus,.white:active{
+    color: white;
+}
+.bgwhite,.navbar-default .container-fluid{
+    background-color: white;
+}
+.bglgray{
+    background-color: #fbfafa;
+}
+.mgray,.mgray:hover,.mgray:focus,.mgray:active,body{
+    color: #585456;
+}
+.bgmgray{
+    background: #585456;
+}
+.bgdgray{
+    background-color: #41474e;
+}
+.orange,.orange:hover,.orange:focus,.orange:active{
+    color: #f37715;
+}
+.bgorange{
+    background-color: #f37715;
+}
+.dorange{
+    color: #ee7516;
+}
+.red,.red:hover,.red:focus,.red:active{
+    color: red;
+}
+.bgred{
+    background-color: red;
+}
+.blue,.blue:hover,.blue:focus,.blue:active{
+    color: #24a2fb;
+}
+.bgblue{
+    background-color: #24a2fb;
+}
+.box{
+    background-color: #dff0d8;
+}
+/*-----define-----*/
+body {font-family: "myriadpro";}
+h1,.fairinfo-right>.row h2, .fairinfo-left>.row h2,.bold{font-family: "myriadprobold";}
+h5,h6,.h3-title{font-weight: bold}
+h1,h5,h6,p,a,.h2-title,.h3-title{text-transform: uppercase;}
+.main-content h5,.main-content p,.main-content a,.panel-default p{text-transform: none;}
+a,a:hover,a:focus,a:active{text-decoration: none;}
+h1 {margin: 25px 0 25px 0;}
+h3 {
+    margin-top: 10px;
+}
+h6{
+    margin-bottom: 0;
+}
+p,.fair-r4 h3{
+    margin-bottom: 5px;
+    text-align: justify;
+}
+.h2-title, .h3-title{
+    text-decoration: underline;
+}
+.h1-num{
+    text-align: center;
+}
+.colorbar,#banner{
+    width:100%;
+}
+.main-content {
+    margin-bottom: 25px;
+}
+.colorbar,#background-dot{margin-top: 20px;}
+.h1-num,.social,.guidetext{margin-top: 15px;}
+/*-----header-----*/
+.colorbar{
+    min-height: 25px;
+}
+.menubar{
+    border: none;
+}
+.navbar-default{
+    box-shadow: none;
+}
+.navbar-default .navbar-nav>li>a{
+    color: #7d7d7d;
+    line-height: 20px;
+    padding: 5px 10px 5px 10px;
+}
+/*-----home-----*/
+.nationalintrobar,.wsfairintro-body,.guidetext{
+    margin-bottom: 20px;
+}
+.jcarousel-wrapper{
+    border: none;
+}
+#ulcarousel{
+    left: 0;
+    top: 0
+}
+.licarousel{
+    width: 200px
+}
+.wsfairintro-text{
+    background-color: #ebebeb;
+}
+.intro-header {
+    margin-bottom: 15px;
+}
+.wsguideintro-row{
+    margin-bottom: 40px;
+}
+/*-----about-----*/
+#imgabout1{
+    margin: auto auto;
+}
+/*-----ourteam-----*/
+.ourteam{
+    height: 2px;
+}
+.ourteam-num{
+    margin-top: 7px;
+    text-align: center;
+}
+.fullheight{
+    height: 100%;
+}
+/*-----world study fair-----*/
+.fair{background-size: cover;}
+.fair-r1{
+    background-image: url("./photos/fair/hcmf.png");
+    background-position: left;
+}
+.fair-r2{
+    background-image: url("./photos/fair/hnfair.png");
+    background-position: top center;
+}
+.fair-r3{
+    background-image: url("./photos/fair/haiphongf.png");
+    background-position: left;
+}
+.fair-r4{
+    background-image: url("./photos/fair/contactf.png");
+    background-position: right top;
+}
+.fairinfo-left,.fairinfo-right{
+    padding-bottom: 10px;
+}
+.fairinfo-left>.row>.col-xs-11 h2{
+    text-align: justify;
+    padding: 20px 10px;
+    font-weight: normal;
+}
+.btnregister{
+    font-weight: bold;
+    border-radius: 9px;
+    margin: 25px 10px 0 0;
+
+}
+/*-----contactus-----*/
+.contactus h5{
+    font-family: "myriadpro";
+    line-height: 24px;
+}
+/*-----footer-----*/
+footer{
+    padding-top: 20px;
+}
+footer ul{
+    padding-left: 15px;
+}
+footer .media{
+    margin-top: 5px;
+}
+footer p, footer a{
+    font-size: 11px;
+}
+#background-dot{
+    z-index: 0;
+    position: absolute;
+
+}
+.social a{
+    margin-right: 10px;
+}
+/*-----register-----*/
+.panel-default{
+    padding: 15px;
+}
+.price {
+    display: none;
+}
+#othertype{
+    display: none;
+}
+/*-----seprate-----*/
+@media (max-width:767px){
+    h1{font-size: 45px}
+    h2{font-size: 22px;}
+    h3{font-size: 16px;
+        line-height: 20px}
+    h5,.btnregister{font-size: 14px;}
+    h6,p,a{font-size: 13px;}
+    header{
+        height: auto;
+    }
+    .smallspace{
+        height: 15px;
+    }
+    .space{
+        height: 30px;
+    }
+    .menubar{
+        margin-bottom: 0 ;
+    }
+    .wsfairintro-num{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .wsfairintro-text{
+        border-left: solid 15px #ffffff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .marginleft{
+        margin-left: 15px;
+    }
+    .main-content p{
+        margin-bottom: 10px;
+    }
+    .fairinfo-left{
+        background-color: rgba(88,84,86,0.9);
+    }
+    .fairinfo-right{
+        background-color: rgba(255,0,0,0.9);
+    }
+    .fair-r4 h3{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .btnregister{
+        padding:3px 10px 3px 10px;
+        margin-right:0px
+    }
+}
+@media (min-width:650px){
+    .fair-r4 h3{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+@media (min-width:768px){
+    h1{font-size: 50px}
+    h2 {font-size: 25px;}
+    h3{font-size: 19px;
+        line-height: 25px;}
+    h5,.btnregister{font-size: 17px;}
+    h6,p,a{font-size: 15px;}
+    .smallspace{
+        height: 20px;
+    }
+    .space{
+        height: 50px;
+    }
+    .menubar{
+        background-image: none;
+        background-color: transparent;
+        border-radius: 0px;
+        line-height: 85px;
+        min-height: 85px;
+        padding: 10px 0 10px;
+    }
+    .navbar-default .navbar-nav{
+        margin-top: 20px;
+    }
+    .navbar-default .navbar-nav>li{
+        border-left: solid 1px #7d7d7d;
+    }
+    .navbar-default .navbar-nav>li:first-child{
+        border: none;
+    }
+    .wsfairintro-num,.wsfairintro-text{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .wsfairintro-text{
+        border-left: solid 30px #ffffff;
+        border-right: solid 50px #ffffff;
+    }
+    .main-content p{
+        margin-bottom: 15px;
+    }
+    .fairinfo-left{
+        background-color: #585456;
+    }
+    .fairinfo-right{
+        background-color: red;
+    }
+    .h1-num{
+        font-size: 60px;
+    }
+    .fair-r4 h3{
+        line-height: 28px;
+    }
+    .btnregister{
+        padding:3px 22px 3px 22px
+    }
+    .nopadright{
+        padding-right: 0;
+    }
+    .nopadleft{
+        padding-left: 0;
+    }
+}
+@media (max-width:991px){
+    .navbar-default .navbar-nav>li>a{
+        font-size: 11px;
+    }
+}
+@media (min-width:992px){
+    .navbar-default .navbar-nav>li>a{
+        font-size: 12px;
+    }
+}
+@media (min-width:1100px){
+    .fair-r4 h3{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+@media (min-width:1200px){
+    #banner {
+        height: 450px;
+        margin-bottom: 15px;
+    }
+    .carousel-inner {
+        height: 450px;
+    }
+}
