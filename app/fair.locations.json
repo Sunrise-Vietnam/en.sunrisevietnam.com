@@ -1,0 +1,58 @@
+{
+  "Locations": [
+    {
+      "id": "1",
+      "name": "Ho Chi Minh World Study Fair",
+      "date": "3:00 PM - 7:30 PM, Friday March 18th 2016",
+      "address": "Liberty Central Saigon Hotel",
+      "sub_address": "59-61 Pasteur Street, 1 District, Ho Chi Minh",
+      "fee": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "2",
+      "name": "Ha Noi World Study Fair",
+      "date": "1:00 PM - 5:30 PM, Saturday March 19th 2016",
+      "address": "Star Galaxy Convention",
+      "sub_address": "87 Lang Ha Street, Dong Da District, Hanoi",
+      "fee": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "3",
+      "name": "Hai Phong World Study Fair",
+      "date": "8:30 AM - 12:00 PM, Sunday March 20th 2016",
+      "address": "Nam Cuong Hotel",
+      "sub_address": "47, Lach Tray Street, Ngo Quyen District, Haiphong",
+      "fee": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "4",
+      "name": "Ho Chi Minh World Study Fair",
+      "date": "3:00 PM - 7:30 PM, Friday September 30th 2016",
+      "address": "Liberty Central Saigon Hotel",
+      "sub_address": "59-61 Pasteur Street, 1 District, Ho Chi Minh",
+      "fee": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "5",
+      "name": "Ha Noi World Study Fair",
+      "date": "1:00 PM - 5:30 PM, Saturday October 1st 2016",
+      "address": "Star Galaxy Convention",
+      "sub_address": "87 Lang Ha Street, Dong Da District, Hanoi",
+      "fee": 1000,
+      "unit": "$"
+    },
+    {
+      "id": "6",
+      "name": "Hai Phong World Study Fair",
+      "date": "8:30 AM - 12:00 PM, Sunday October 2nd 2016",
+      "address": "Nam Cuong Hotel",
+      "sub_address": "47, Lach Tray Street, Ngo Quyen District, Haiphong",
+      "fee": 1000,
+      "unit": "$"
+    }
+  ]
+}

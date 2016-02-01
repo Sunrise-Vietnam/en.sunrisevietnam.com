@@ -6,6 +6,12 @@
     font-family: "myriadprobold";
     src: url("./font-myriadpro/myriadpro-bold.otf")
 }
+
+
+.home-icon{
+    margin-top: -3px !important;
+}
+
 .white,.white:hover,.white:focus,.white:active{
     color: white;
 }
@@ -201,6 +207,9 @@ footer p, footer a{
 #othertype{
     display: none;
 }
+.form-control{
+    border-radius: 0px;
+}
 /*-----seprate-----*/
 @media (max-width:767px){
     h1{font-size: 45px}
@@ -249,6 +258,10 @@ footer p, footer a{
     .btnregister{
         padding:3px 10px 3px 10px;
         margin-right:0px
+    }
+    .nopad{
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 @media (min-width:650px){
@@ -344,4 +357,8 @@ footer p, footer a{
     .carousel-inner {
         height: 450px;
     }
+}
+
+a.jcarousel-control-next > span, a.jcarousel-control-prev > span{
+    margin-top: 4px;
 }

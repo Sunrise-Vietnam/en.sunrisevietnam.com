@@ -3,6 +3,9 @@ import React from 'react';
 import Slide from '../Slide.jsx';
 
 export default class Home extends React.Component{
+    componentDidMount(){
+        require('../../libs/jcarousel.responsive.js');
+    }
     render(){
         return <div>
             <Slide/>

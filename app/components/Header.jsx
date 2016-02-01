@@ -19,7 +19,7 @@ export default class Header extends React.Component{
                         </div>
                         <div className="collapse navbar-collapse" id="smallmenu">
                             <ul className="nav navbar-nav navbar-right">
-                                <li className="hidden-xs"><Link to='/'><img src={require("../photos/home/homeicon.png")}/></Link></li>
+                                <li className="hidden-xs"><Link to='/'><img className="home-icon" src={require("../photos/home/homeicon.png")}/></Link></li>
                                 <li className="visible-xs"><Link to='/'>HOME</Link></li>
                                 <li><Link to='about-us'>ABOUT US</Link></li>
                                 <li><Link to='our-team'>OUR TEAM</Link></li>

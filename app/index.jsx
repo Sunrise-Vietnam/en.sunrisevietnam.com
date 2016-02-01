@@ -1,6 +1,9 @@
 require('expose?$!expose?jQuery!jquery');
 require("bootstrap-webpack");
-//require('expose?$!expose?jQuery!./libs/jcarousel.responsive.js');
+require('./libs/jcarousel.js');
+//require('./libs/validator.min.js');
+require('!style!css!./libs/jcarousel.responsive.css');
+//require('!style!css!./libs/bootstrapValidator.min.css');
 require('./main.css');
 
 import React from 'react';
@@ -13,6 +16,7 @@ import OurTeam from './components/pages/OurTeam.jsx';
 import WorldStudyFair from './components/pages/WorldStudyFair.jsx';
 import WorldStudyGuide from './components/pages/WorldStudyGuide.jsx';
 import ContactUs from './components/pages/ContactUs.jsx';
+import Register from './components/pages/Register.jsx';
 
 import { Router, Route, browserHistory } from 'react-router';
 
@@ -25,6 +29,7 @@ ReactDom.render((
             <Route path="world-study-fair" component={WorldStudyFair}/>
             <Route path="world-study-guide" component={WorldStudyGuide}/>
             <Route path="contact-us" component={ContactUs}/>
+            <Route path="register-fair" component={Register}/>
         </Route>
     </Router>
 ), document.getElementById('app'))
