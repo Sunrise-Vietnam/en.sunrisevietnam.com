@@ -128,8 +128,8 @@ export default class WorldStudyFair extends React.Component{
                                 <div className="col-xs-10 col-xs-offset-1">
                                     <h3>Sunrise Vietnam will automatically offer you 5%
                                         discount if total booking amount is above $4,000 and 10% discount if total booking amount is $6,000<br/>
-                                        If you have any question, feel free to contact Ms. Mai at <b>+84 936 772 474</b> or via email
-                                        <b>mai.pp@sunrisevietnam.com</b></h3>
+                                        If you have any question, feel free to contact Ms. Mai at <b>+84 936 772 474</b> or via email&nbsp;
+                                        <b><a className="white mailto" href="mailto:mai.pp@sunrisevietnam.com">mai.pp@sunrisevietnam.com</a></b></h3>
                                 </div>
                             </div>
                         </div>

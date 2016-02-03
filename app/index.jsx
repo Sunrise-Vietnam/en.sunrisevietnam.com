@@ -5,6 +5,7 @@ require('./libs/jcarousel.js');
 require('!style!css!./libs/jcarousel.responsive.css');
 //require('!style!css!./libs/bootstrapValidator.min.css');
 require('./main.css');
+require('!style!css!react-bootstrap-modal/lib/styles/rbm-complete.css');
 
 import React from 'react';
 import ReactDom from 'react-dom';

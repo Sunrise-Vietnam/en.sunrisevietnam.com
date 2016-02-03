@@ -70,7 +70,7 @@ export default class OurTeam extends React.Component{
                             <img width="100%" className="img-circle img-responsive" src={require("../../photos/ourteam/ourteam3.png")}/>
                         </div>
                         <div className="col-xs-7 col-xs-offset-0 col-sm-offset-1 col-md-8">
-                            <p><b className="text-uppercase">Name:</b> PHAM THI PHUONG MAI – Marketing and Communication
+                            <p><b className="text-uppercase">Name:</b> PHAM THI PHUONG MAI – Vice Director of Marketing and Sales
                                 Manager</p>
 
                             <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> BA in Business English at Foreign Trade
@@ -358,6 +358,12 @@ export default class OurTeam extends React.Component{
                                         trained by Institute of Education Management, Ministry of Education and
                                         Training of Vietnam in 2015</p>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="smallspace"></div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h2>And other members in support team.</h2>
                             </div>
                         </div>
                     </div>

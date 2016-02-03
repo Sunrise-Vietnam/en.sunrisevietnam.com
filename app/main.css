@@ -7,6 +7,13 @@
     src: url("./font-myriadpro/myriadpro-bold.otf")
 }
 
+.asterisk{
+    color : red;
+}
+
+.mailto{
+    text-transform: none !important;
+}
 
 .home-icon{
     margin-top: -3px !important;

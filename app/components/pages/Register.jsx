@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Modal from 'react-bootstrap-modal';
 import _ from 'underscore';
 import DDP from 'ddp.js';
 import RadioGroup from 'react-radio-group';
@@ -17,10 +18,11 @@ const _formObj = {
     typeOfInstitution: '',
     typeOfInstitutionOther: '',
     locations: [],
-    totalFee: 0
+    totalFee: 0,
+    isModalOpen: false
 }
 
-const socketServer = 'ws://localhost:5000/websocket';
+const socketServer = 'ws://system.sunrisevietnam.com/websocket';
 
 export default class Register extends React.Component {
     constructor(props) {
@@ -38,18 +40,50 @@ export default class Register extends React.Component {
         this._handle_typeOfInstitution = this._handle_typeOfInstitution.bind(this);
         this._handle_typeOfInstitutionOther = this._handle_typeOfInstitutionOther.bind(this);
         this._handle_chooseLocations = this._handle_chooseLocations.bind(this);
+
         this._isFormValid = this._isFormValid.bind(this);
         this._resetForm = this._resetForm.bind(this);
+        this._handle_Submit = this._handle_Submit.bind(this);
+        this._closeModal = this._closeModal.bind(this);
     }
 
-    _isFormValid(){
-        return this.state.nameOfInstitution && this.state.contactPerson && this.state.address && this.state.phoneNumber && this.state.email && this.state.website && this.state.typeOfInstitution && (this.state.locations.length > 0) && this.state.totalFee > 0;
+    _handle_Submit() {
+        try {
+            if (this.ddp) {
+                let self = this;
+                let obj = _.omit(this.state, 'isOpenModal');
+                let msgId = this.ddp.method('bookingFair', [obj]);
+                this.ddp.on('result', function (msg) {
+                    if (msgId === msg.id && !msg.error) {
+                        self.setState({
+                            isOpenModal: true
+                        });
+                    }
+                })
+            }
+        } catch (ex) {
+            console.log('Error', ex);
+        }
     }
 
-    _resetForm(){
+    _isFormValid() {
+        let regEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let isValid = this.state.nameOfInstitution && this.state.contactPerson && this.state.address && this.state.phoneNumber && regEmail.test(this.state.email) && (this.state.locations.length > 0);
+        let isTypeOfInstitutionEqualOther = this.state.typeOfInstitution === 'Other';
+
+        return (!isTypeOfInstitutionEqualOther) ? isValid && this.state.typeOfInstitution : this.state.typeOfInstitutionOther;
+    }
+
+    _resetForm() {
+        $('input:checkbox').parent().parent().parent().parent().removeClass("box");
         this.setState({
-            locations : []
+            locations: []
         });
+    }
+
+    _closeModal() {
+        this.setState(_.clone(_formObj));
+        this.props.history.pushState(null, "/");
     }
 
     _handle_nameOfInstitution(e) {
@@ -112,7 +146,8 @@ export default class Register extends React.Component {
         var totalFee = this.state.totalFee || 0;
 
         if (addOrRemove === 'added') {
-            __locations.push(location);
+            var _loc = _.findWhere(_locations, {id: location.id}) || {};
+            __locations.push(_.extend(_loc, location));
         } else if (addOrRemove === 'changed') {
             __locations = _.map(__locations, function (loc) {
                 if (loc.id === location.id) {
@@ -125,18 +160,21 @@ export default class Register extends React.Component {
             __locations = _.without(__locations, _.findWhere(__locations, {id: location.id})) || [];
         }
 
-        totalFee = _.reduce(_.map(__locations, function(l){return l.fee}), function (a, b) {
+        /*totalFee = _.reduce(_.map(__locations, function (l) {
+            return l.fee
+        }), function (a, b) {
             return a + b
-        }, 0);
+        }, 0);*/
 
-        this.setState({
+        /*this.setState({
             totalFee: totalFee
-        });
+        });*/
 
         this.setState({
             locations: __locations
         });
 
+        //console.info(__locations);
     }
 
     componentDidMount() {
@@ -176,7 +214,7 @@ export default class Register extends React.Component {
         let locationOutput = _.map(_locations, function (location) {
             return <RegisterLocation location={location} key={location.id}
                                      onChooseLocation={self._handle_chooseLocations}/>
-        })
+        });
 
         let _disabled = {};
         if (!this._isFormValid()) {
@@ -186,7 +224,7 @@ export default class Register extends React.Component {
 
         return (
             <div>
-                <h2 className="text-center"><b>REGISTER</b></h2>
+                <h2 className="text-center"><b>Educational Institution's Booking Form</b></h2>
 
                 <div className="smallspace"></div>
                 <div className="container">
@@ -195,7 +233,7 @@ export default class Register extends React.Component {
                             <div className="panel-heading"><h3><b>Section 1 - Institution</b></h3></div>
                             <div className="panel-body">
                                 <div className="form-group col-xs-12">
-                                    <label><b>Name of Institution</b>:</label>
+                                    <label><b>Name of Institution</b>: <span className="asterisk">(*)</span></label>
 
                                     <div className="input-group col-xs-12">
                                         <input aria-describedby="nameinst" type="text" className="form-control"
@@ -206,7 +244,7 @@ export default class Register extends React.Component {
                                 </div>
 
                                 <div className="form-group col-xs-12">
-                                    <label>Contact person:</label>
+                                    <label>Contact person: <span className="asterisk">(*)</span></label>
 
                                     <div className="input-group col-xs-12">
                                         <input aria-describedby="name" type="text" className="form-control"
@@ -216,7 +254,7 @@ export default class Register extends React.Component {
                                 </div>
 
                                 <div className="form-group col-xs-12">
-                                    <label>Address:</label>
+                                    <label>Address: <span className="asterisk">(*)</span></label>
 
                                     <div className="input-group col-xs-12">
                                         <textarea cols="30" rows="2" className="form-control" value={this.state.address}
@@ -225,7 +263,7 @@ export default class Register extends React.Component {
                                 </div>
                                 <div className="form-group col-xs-12">
                                     <div className="col-xs-12 col-sm-6 nopadleft nopad">
-                                        <label>Tel:</label>
+                                        <label>Tel: <span className="asterisk">(*)</span></label>
 
                                         <div className="input-group col-xs-12">
                                             <input aria-describedby="tel" type="text" pattern="^[+0-9; ]{1,}$"
@@ -247,7 +285,7 @@ export default class Register extends React.Component {
 
                                 <div className="form-group col-xs-12">
                                     <div className="col-xs-12 col-sm-6 nopadleft nopad">
-                                        <label>Email:</label>
+                                        <label>Email: <span className="asterisk">(*)</span></label>
 
                                         <div className="input-group col-xs-12">
                                             <input aria-describedby="mail" type="email" className="form-control"
@@ -267,7 +305,7 @@ export default class Register extends React.Component {
                                 </div>
 
                                 <div className="form-group col-xs-12">
-                                    <label><b>Type of Institue:</b></label>
+                                    <label><b>Type of Institue: <span className="asterisk">(*)</span></b></label>
 
                                     <div className="form-group">
                                         <div className="radio col-xs-12 col-sm-4">
@@ -346,24 +384,13 @@ export default class Register extends React.Component {
 
                         <div className="panel panel-danger">
                             <div className="panel-heading"><h3>
-                                <b>Section 2 - Location(s)</b>
+                                <b>Section 2 - Location(s)</b> <span className="asterisk">(*)</span>
                             </h3></div>
                             <div className="panel-body">
                                 <div className="row">
                                     {locationOutput}
                                 </div>
-                                <div
-                                    className="row">
-                                    <div
-                                        className="col-xs-12">
-                                        <div
-                                            className="panel panel-default">
-                                            <h5>
-                                                Total
-                                                Amount: $ {this.state.totalFee}</h5>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                         <div
@@ -371,9 +398,9 @@ export default class Register extends React.Component {
                             <div
                                 className="col-xs-12 text-center">
                                 <button
-                                    type="submit"
+                                    type="button"
                                     className="btn btnregister bgblue white"
-                                    id="dkbtn" {..._disabled}>
+                                    id="dkbtn" {..._disabled} onClick={this._handle_Submit}>
                                     <h3>
                                         REGISTER</h3>
                                 </button>
@@ -388,6 +415,23 @@ export default class Register extends React.Component {
                         </div>
                     </form>
                 </div>
+                <Modal show={this.state.isOpenModal} backdrop="static" onHide={this._closeModal}
+                       aria-labelledby="ModalHeader">
+                    <Modal.Header closeButton>
+                        <Modal.Title id='ModalHeader'>Registered successfully</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div style={{"textTransform" : "none !important;"}}>
+                            <h5>Thank you for register.</h5>
+                            <h5>We will contact you shortly.</h5>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <button className='btn btn-primary' onClick={this._closeModal}>
+                            OK!
+                        </button>
+                    </Modal.Footer>
+                </Modal>
             </div>
         )
     }
@@ -400,7 +444,6 @@ class RegisterLocation extends React.Component {
         this.state = {
             id: this.props.location.id,
             checkedThis: false,
-            location: '',
             fee: this.props.location.fee,
             interpreterRequired: false
         }
@@ -436,11 +479,6 @@ class RegisterLocation extends React.Component {
         var addOrRemove = (e.target.checked === true) ? 'added' : 'remove';
         this.props.onChooseLocation(location, addOrRemove);
     }
-
-    componentDidUpdate() {
-
-    }
-
 
     render() {
         let radioName = 'Interpreter' + _.uniqueId();
@@ -478,11 +516,6 @@ class RegisterLocation extends React.Component {
 
                     <p>
                         {this.props.location.sub_address}</p>
-                    <h5 className="price-none">
-                        Fee: &nbsp;
-                        {this.props.location.unit}
-                        {this.props.location.fee}
-                    </h5>
                     <label>Interpreter required:</label>
 
                     <RadioGroup name={radioName} selectedValue={this.state.interpreterRequired}
