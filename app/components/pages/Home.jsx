@@ -6,6 +6,7 @@ export default class Home extends React.Component{
     componentDidMount(){
         require('../../libs/jcarousel.responsive.js');
     }
+
     render(){
         return <div>
             <Slide/>

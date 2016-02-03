@@ -333,7 +333,7 @@ export default class OurTeam extends React.Component{
                                 <div className="col-xs-12 nopadleft main-content">
                                     <p><b className="text-uppercase">Name:</b> DO NHAT QUYNH – Education Manager</p>
                                     <p><b className="text-uppercase">Qualification:</b> Diploma from Haiphong Culture and Art College</p>
-                                    <p><b className="text-uppercase">Experience:</b> 01 years in student counseling</p>
+                                    <p><b className="text-uppercase">Experience:</b> 02 years in student counseling</p>
                                     <p><b className="text-uppercase">Professional Certificate:</b> Certificate of International Education
                                         Specialists
                                         trained by Institute of Education Management, Ministry of Education and
@@ -344,14 +344,14 @@ export default class OurTeam extends React.Component{
                                 <div className="col-xs-10 nopadleft marginleft ourteam bgorange"></div>
                                 <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#3</h1></div>
                                 <div className="col-xs-9 nopadright fullheight">
-                                    <h3 className="text-uppercase"><b>THI THUY THUY LINH</b></h3>
+                                    <h3 className="text-uppercase"><b>TRAN THI THUY LINH</b></h3>
                                     <h3>Education Counselor</h3></div>
                                 <div className="col-xs-12 nopadright main-content">
-                                    <p><b className="text-uppercase">Name:</b> THI THUY THUY LINH – Education counselor</p>
+                                    <p><b className="text-uppercase">Name:</b> TRAN THI THUY LINH – Education counselor</p>
 
                                     <p><b className="text-uppercase">Qualification:</b> BA in English at Haiphong University</p>
 
-                                    <p><b className="text-uppercase">Experience:</b> 01 years in student counseling</p>
+                                    <p><b className="text-uppercase">Experience:</b> 02 years in student counseling</p>
 
                                     <p><b className="text-uppercase">Professional Certificate:</b> Certificate of International Education
                                         Specialists
