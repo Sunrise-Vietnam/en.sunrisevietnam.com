@@ -53,7 +53,8 @@ var common = {
         new HtmlwebpackPlugin({
             template: 'node_modules/html-webpack-template/index.html',
             title : 'Sunrise Vietnam Co. , Ltd',
-            appMountId: 'app'
+            appMountId: 'app',
+            mobile:true
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
