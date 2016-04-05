@@ -217,36 +217,13 @@ export default class OurTeam extends React.Component{
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-12 col-sm-6">
-                            <div className="col-xs-10 nopadleft marginleft ourteam bgorange"></div>
-                            <div className="col-xs-3 nopadleft"><h1 className="ourteam-num">#1</h1></div>
-                            <div className="col-xs-9 nopadleft fullheight">
-                                <h3 className="text-uppercase"><b>TA NGOC VAN</b></h3>
-                                <h3>Branch Director</h3></div>
-                            <div className="col-xs-12 nopadleft main-content">
-                                <p><b className="text-uppercase">Name:</b> TA NGOC VAN – Branch Director</p>
-
-                                <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> BA in English in University of Foreign
-                                    Languages – Hanoi National University (Ho Chi Minh campus), Higher
-                                    Diploma in Primary Education Teacher Training in KienGiang College of
-                                    Education &amp; Training</p>
-
-                                <p><b className="text-uppercase">Experience:</b> 11 years in student counseling, 04 years in teaching at
-                                    Primary Education level</p>
-
-                                <p><b className="text-uppercase">Professional Certificate:</b> Certificate in Direct Marketing Impactful
-                                    Planning &amp; Targeting by BMG in 2010; Certificate of International
-                                    Education Specialists trained by Institute of Education Management,
-                                    Ministry of Education and Training of Vietnam in 2014</p>
-                            </div>
-                        </div>
-                        <div className="col-xs-12 col-sm-6">
                             <div className="col-xs-10 nopadright marginleft ourteam bgorange"></div>
-                            <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#2</h1></div>
+                            <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#1</h1></div>
                             <div className="col-xs-9 nopadright fullheight">
                                 <h3 className="text-uppercase"><b>PHAM THI PHUONG THUY</b></h3>
-                                <h3>Education Counselor</h3></div>
+                                <h3>Branch Manager</h3></div>
                             <div className="col-xs-12 nopadright main-content">
-                                <p><b className="text-uppercase">Name:</b> PHAM THI PHUONG THUY –Education Counselor</p>
+                                <p><b className="text-uppercase">Name:</b> PHAM THI PHUONG THUY – Branch Manager</p>
 
                                 <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> BSc (Hons) in Business and Management
                                     (Awarded by the University of Buckingham – UK)</p>
@@ -258,39 +235,68 @@ export default class OurTeam extends React.Component{
                                     Training of Vietnam in 2014</p>
                             </div>
                         </div>
+	                    <div className="col-xs-12 col-sm-6">
+		                    <div className="col-xs-10 nopadleft marginleft ourteam bgorange"></div>
+		                    <div className="col-xs-3 nopadleft"><h1 className="ourteam-num">#2</h1></div>
+		                    <div className="col-xs-9 nopadleft fullheight">
+			                    <h3 className="text-uppercase"><b>VO THI KIM PHUONG</b></h3>
+			                    <h3>Education Counselor</h3></div>
+		                    <div className="col-xs-12 nopadleft main-content">
+			                    <p><b className="text-uppercase">Name:</b> VO THI KIM PHUONG – Education Counselor</p>
+
+			                    <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> Higher Diploma in International Hotel
+				                    Management at Vietnam Australia Advanced College of Hotel
+				                    Management</p>
+
+			                    <p><b className="text-uppercase">Experience:</b> 01 years in student counseling</p>
+		                    </div>
+	                    </div>
+
                     </div>
                     <div className="row">
                         <div className="col-xs-12 col-sm-6">
-                            <div className="col-xs-10 nopadleft marginleft ourteam bgorange"></div>
-                            <div className="col-xs-3 nopadleft"><h1 className="ourteam-num">#3</h1></div>
-                            <div className="col-xs-9 nopadleft fullheight">
-                                <h3 className="text-uppercase"><b>VO THI KIM PHUONG</b></h3>
-                                <h3>Education Counselor</h3></div>
-                            <div className="col-xs-12 nopadleft main-content">
-                                <p><b className="text-uppercase">Name:</b> VO THI KIM PHUONG – Education Counselor</p>
-
-                                <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> Higher Diploma in International Hotel
-                                    Management at Vietnam Australia Advanced College of Hotel
-                                    Management</p>
-
-                                <p><b className="text-uppercase">Experience:</b> 01 years in student counseling</p>
-                            </div>
-                        </div>
-                        <div className="col-xs-12 col-sm-6">
                             <div className="col-xs-10 nopadright marginleft ourteam bgorange"></div>
-                            <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#4</h1></div>
+                            <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#3</h1></div>
                             <div className="col-xs-9 nopadright fullheight">
-                                <h3 className="text-uppercase"><b>NGUYEN THI HOA MY</b></h3>
-                                <h3>Office Assistant</h3></div>
+                                <h3 className="text-uppercase"><b>LE CAO BAO</b></h3>
+                                <h3>Education Counselor</h3></div>
                             <div className="col-xs-12 nopadright main-content">
-                                <p><b className="text-uppercase">Name:</b> NGUYEN THI HOA MY – Office Assistant</p>
+                                <p><b className="text-uppercase">Name:</b> LE CAO BAO – Education Counselor</p>
 
-                                <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> BA in English in Quy Nhon University
-                                    Experience: 04 years in student counseling</p>
+                                <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> Bachelor of Business Management at International University - National University HCMC</p>
                             </div>
                         </div>
-                    </div>
+	                    <div className="col-xs-12 col-sm-6">
+		                    <div className="col-xs-10 nopadright marginleft ourteam bgorange"></div>
+		                    <div className="col-xs-3 nopadright"><h1 className="ourteam-num">#4</h1></div>
+		                    <div className="col-xs-9 nopadright fullheight">
+			                    <h3 className="text-uppercase"><b>CAO THANH HUYEN</b></h3>
+			                    <h3>Education Counselor</h3></div>
+		                    <div className="col-xs-12 nopadright main-content">
+			                    <p><b className="text-uppercase">Name:</b> CAO THANH HUYEN – Education Counselor</p>
 
+			                    <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> Bachelor of International Relations at University of Social Sciences &amp; Humanities</p>
+		                    </div>
+	                    </div>
+                    </div>
+	                <div className="row">
+		                <div className="col-xs-12">
+			                <div className="col-xs-10 nopadleft marginleft ourteam bgorange"></div><div className="col-xs-1 ourteam"></div>
+			                <div className="col-xs-3 nopadleft col-sm-2"><h1 className="ourteam-num"><b>#5</b></h1></div>
+			                <div className="col-xs-9 nopadleft col-sm-4 fullheight">
+				                <div className="hidden-xs smallspace"></div>
+				                <h3 className="text-uppercase"><b>NGUYEN THI HOA MY</b></h3>
+				                <h3>Office Assistant</h3></div>
+			                <div className="col-xs-12 nopadleft col-sm-6 main-content">
+				                <div className="hidden-xs smallspace"></div>
+				                <p><b className="text-uppercase">Name:</b> NGUYEN THI HOA MY – Office Assistant</p>
+
+				                <p><b className="text-uppercase">Qualifications &amp; Institutions:</b> BA in English in Quy Nhon University</p>
+
+				                <p><b className="text-uppercase">Experience:</b> 04 years in student counseling</p>
+			                </div>
+		                </div>
+	                </div>
                 </div>
                 <div className="bglgray">
                     <div className="container">
